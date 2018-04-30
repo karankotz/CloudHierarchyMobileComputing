@@ -1,6 +1,10 @@
 [
     {
-        "merged": "C:\\Mobile Computing\\Mobile Computing Project Version 1\\HierarchicalCloud\\AndroidEdgeServer\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_launcher.png",
-        "source": "C:\\Mobile Computing\\Mobile Computing Project Version 1\\HierarchicalCloud\\AndroidEdgeServer\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "/home/karan/mobileProject/CloudHierarchyMobileComputing/AndroidEdgeServer/C:\\Mobile Computing\\Mobile Computing Project Version 1\\HierarchicalCloud\\AndroidEdgeServer\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi\\ic_launcher.png",
+        "source": "/home/karan/mobileProject/CloudHierarchyMobileComputing/AndroidEdgeServer/C:\\Mobile Computing\\Mobile Computing Project Version 1\\HierarchicalCloud\\AndroidEdgeServer\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "/home/karan/mobileProject/CloudHierarchyMobileComputing/AndroidEdgeServer/app/build/intermediates/res/merged/debug/mipmap-xhdpi/ic_launcher.png",
+        "source": "/home/karan/mobileProject/CloudHierarchyMobileComputing/AndroidEdgeServer/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     }
 ]
