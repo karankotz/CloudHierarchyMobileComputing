@@ -20,15 +20,11 @@ public class N_Queens extends HttpServlet {
 
     private static final Logger LOGGER = Logger.getLogger(Login.class.getName());
     public static final String RELOCATE_PARAM_NAME = "relocate";
-    private int nQueensLocalNr;
-    private double nQueensLocalTotDur;
-    private int nQueensRemoteNr;
-    private double nQueensRemoteTotDur;
-    private TextView nQueensLocalNrText;
-    int count = 0;
-    String c = "0";
-    String Ns;
-    int N;
+//    private int nQueensLocalNr;
+//    private double nQueensLocalTotDur;
+//    private int nQueensRemoteNr;
+//    private double nQueensRemoteTotDur;
+//    private TextView nQueensLocalNrText;
 
     public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException {
         ServerConfig serverConfig = (ServerConfig) getServletContext().getAttribute(ServerConfig.class.getName());
@@ -38,18 +34,27 @@ public class N_Queens extends HttpServlet {
 
         doc.writeln("<div class=\"form-unit\">");
 
-        doc.writeln("<h2>N_Queen's Chess Problem</h2>");
+        doc.writeln("<h2>N_Queen's Problem-High Computational Analysis</h2>");
+        int count = 0;
+        //int N=0;
+
+        String c = "0";
+        //String Ns;
+
 
         if (request.getMethod().equals(HttpRequestWrapper.METHOD_POST)) {
             LOGGER.fine("Karan reached this page");
 
             if (request.getPostParameter("value") != null) {
-                Ns = request.getPostParameter("value");
-                N = Integer.parseInt(Ns);
+                String Ns = request.getPostParameter("value");
+                int N = Integer.parseInt(Ns);
 //--------------------------------------------------------------------------------------------------------
-                int n=N_Queen_helper.main(N);
-                doc.writeln("<h5>called Queens and number of queens is"+n+"</h5>");
 
+                N_Queen_helper helper= new N_Queen_helper();
+                int n=helper.main(N);
+                //doc.writeln("<h5>called Queens and number of queens is"+n+"</h5>");
+                c=String.valueOf(n);
+                n=0;
 
 
             }
@@ -59,7 +64,7 @@ public class N_Queens extends HttpServlet {
         if (request.getParameter(RELOCATE_PARAM_NAME) != null) {
             location += "?" + RELOCATE_PARAM_NAME + "=" + Utilities.urlEncode(request.getParameter(RELOCATE_PARAM_NAME));
         }
-        count = count + 1;
+        //count = count + 1;
         String form = "<form action=\""
                 + location
                 + "\" method=\"post\">\n"
@@ -80,11 +85,13 @@ public class N_Queens extends HttpServlet {
         doc.writeln("</div>");
         if (c != "0") {
             doc.write("<br />");
-            doc.write("<h4> Result of the calculation is " + c + "</h4>");
+            doc.write("<h4> The total number Queen's posibilities is " + c + "</h4>");
+
 
             //doc.write(dropdown);
             //doc.write(tempInFarhenheit);
         }
+
         response.getWriter().print(doc.toString());
     }
 

@@ -18,6 +18,9 @@ public class Index extends HttpServlet {
 
         doc.writeln("<div class=\"page-header\"><h1>About</h1></div>");
         doc.write("<p> Web Server running from the Edge Device</p>");
+
+        doc.write("<br /><button class=\"btn btn-lg btn-primary btn-block\" onClick=\"http://app-env-smaple.us-west-2.elasticbeanstalk.com/\">Cloud</button>\n");
+
         return doc;
     }
 }

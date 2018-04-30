@@ -14,7 +14,7 @@ public class N_Queen_helper {
 //
 //        doc.writeln("<h2>N_Queen's Chess Problem</h2>");
 
-    static int nQ;
+    public int nQ;
 
     /***************************************************************************
      * Return true if queen placement q[n] does not conflict with
@@ -32,7 +32,7 @@ public class N_Queen_helper {
     /***************************************************************************
      * Prints n-by-n placement of queens from permutation q in ASCII.
      ***************************************************************************/
-    public static void printQueens(int[] q) {
+    public void printQueens(int[] q) {
         int n = q.length;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
@@ -49,12 +49,12 @@ public class N_Queen_helper {
     /***************************************************************************
      *  Try all permutations using backtracking
      ***************************************************************************/
-    public static void enumerate(int n) {
+    public  void enumerate(int n) {
         int[] a = new int[n];
         enumerate(a, 0);
     }
 
-    public static void enumerate(int[] q, int k) {
+    public  void enumerate(int[] q, int k) {
         int n = q.length;
         if (k == n) printQueens(q);
         else {
@@ -66,7 +66,7 @@ public class N_Queen_helper {
     }
 
 
-    public static int main(int n) {
+    public int main(int n) {
         //int n = Integer.parseInt(args[0]);
         enumerate(n);
         return nQ;
