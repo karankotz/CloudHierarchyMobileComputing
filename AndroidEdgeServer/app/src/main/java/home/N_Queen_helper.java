@@ -36,7 +36,7 @@ public class N_Queen_helper {
         int n = q.length;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                if (q[i] == j) //System.out.print("Q ");
+                if (q[i] == j) 
                     nQ+=1;
                 else           System.out.print("* ");
             }

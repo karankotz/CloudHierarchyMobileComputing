@@ -46,8 +46,20 @@ public class UnitConverter extends HttpServlet {
             if (request.getPostParameter("temp")!=null) {
                 unconvertedInput = request.getPostParameter("temp");
                 double t=Double.parseDouble(unconvertedInput);
-
                 dropdown = request.getPostParameter("typeofconversion");
+
+                // offloading logic
+
+                if (t>=100.0){
+
+                    LOGGER.fine("Offloading the computation");
+                }
+
+
+
+
+
+
 
                 if (Objects.equals(dropdown, new String("f2c"))){
                     convertedOutput=(t-32)*0.55556;

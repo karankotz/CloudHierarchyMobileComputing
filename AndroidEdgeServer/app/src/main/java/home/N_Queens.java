@@ -1,4 +1,5 @@
 package home;
+import java.io.IOException;
 import java.util.Objects;
 import java.util.logging.Logger;
 
@@ -15,6 +16,9 @@ import android.util.Log;
 import android.widget.TextView;
 import com.edge.http.servlet.HttpServletResponse;
 import com.edge.http.utilities.Utilities;
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.Response;
 
 public class N_Queens extends HttpServlet {
 
@@ -48,15 +52,35 @@ public class N_Queens extends HttpServlet {
             if (request.getPostParameter("value") != null) {
                 String Ns = request.getPostParameter("value");
                 int N = Integer.parseInt(Ns);
+
+                if (N > 8) {
+                    OkHttpClient client = new OkHttpClient();
+
+                    Request request1 = new Request.Builder()
+                            .url("http://app-env-smaple.us-west-2.elasticbeanstalk.com/nqueen?input=8")
+                            .get()
+                            .addHeader("Cache-Control", "no-cache")
+                            .addHeader("Postman-Token", "922390c9-49e5-43d6-b718-c04336511a3c")
+                            .build();
+
+                    try {
+                        Response response1 = client.newCall(request1).execute();
+                        c = "From Cloud";
+                        c += response1.body().string();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                } else {
 //--------------------------------------------------------------------------------------------------------
 
-                N_Queen_helper helper= new N_Queen_helper();
-                int n=helper.main(N);
-                //doc.writeln("<h5>called Queens and number of queens is"+n+"</h5>");
-                c=String.valueOf(n);
-                n=0;
+                    N_Queen_helper helper = new N_Queen_helper();
+                    int n = helper.main(N);
+                    //doc.writeln("<h5>called Queens and number of queens is"+n+"</h5>");
+                    c = String.valueOf(n);
+                    n = 0;
 
 
+                }
             }
         }
 //---------------------------------------------------------------------------------------------------------

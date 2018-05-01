@@ -3,6 +3,15 @@
 
     <item
         is-multidex="false"
+        jar="/home/karan/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/2.1.0/9b51f7d0c19f179b52beab7cb433f8ba5cf786a4/okhttp-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9b51f7d0c19f179b52beab7cb433f8ba5cf786a4">
+        <dex dex="/home/karan/mobileProject/CloudHierarchyMobileComputing/AndroidEdgeServer/app/build/intermediates/pre-dexed/debug/okhttp-2.1.0_3ff0441a6131a90721406bddc58b0b9bcfa0f60e.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/home/karan/mobileProject/CloudHierarchyMobileComputing/AndroidEdgeServer/cli/build/libs/cli.jar"
         jumboMode="false"
         optimize="true"
@@ -18,6 +27,15 @@
         revision="26.0.1"
         sha1="2d05bb1ed46c14292fa12541f540f0a4ad625b50">
         <dex dex="/home/karan/mobileProject/CloudHierarchyMobileComputing/AndroidEdgeServer/app/build/intermediates/pre-dexed/debug/http_d1bb1eaf08ecff13b1ef185081dbaed03927684c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/karan/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.0.1/39eff75ddcb987ff65888361a29f489c178429a3/okio-1.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="39eff75ddcb987ff65888361a29f489c178429a3">
+        <dex dex="/home/karan/mobileProject/CloudHierarchyMobileComputing/AndroidEdgeServer/app/build/intermediates/pre-dexed/debug/okio-1.0.1_97453457f7e996cb9bdbd9ef6f50faa6d8afe72f.jar" />
     </item>
     <item
         is-multidex="false"
